@@ -1,9 +1,13 @@
 import java.lang.ArithmeticException;
 import java.lang.ArrayIndexOutOfBoundsException;
 
-public class DivisionByZero {
+public class DivisionByZero extends MyException{
+    public DivisionByZero(int detail, String message) {
+        super(detail, message);
+    }
+
     public static void main(String[] args) {
-        DivisionByZero div = new DivisionByZero();
+        DivisionByZero div = new DivisionByZero(args.length, " / zero");
         div.doAction();
     }
 
